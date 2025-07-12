@@ -1,0 +1,100 @@
+{
+    "camera": {
+        "id": 1,
+        "layer": 1
+    },
+    "background": {
+        "id": 2,
+        "layer": 1
+    },
+    "boundings": {
+        "id": 3,
+        "layer": 1
+    },
+    "grid": {
+        "id": 4,
+        "layer": 1
+    },
+
+    "gameObjetsLow": {
+        "id": 1,
+        "layer": 2
+    },
+    "playersLow": {
+        "id": 2,
+        "layer": 2
+    },
+    "animalsLow": {
+        "id": 3,
+        "layer": 2
+    },
+    "animalsESPLow": {
+        "id": 4,
+        "layer": 2
+    },
+    "playersESPLow": {
+        "id": 5,
+        "layer": 2
+    },
+    "bridge": {
+        "id": 6,
+        "layer": 2
+    },
+    "playersHigh": {
+        "id": 7,
+        "layer": 2
+    },
+    "animalsHigh": {
+        "id": 8,
+        "layer": 2
+    },
+    "gameObjetsHigh": {
+        "id": 9,
+        "layer": 2
+    },
+    "stones": {
+        "id": 10,
+        "layer": 2
+    },
+    "golds": {
+        "id": 11,
+        "layer": 2
+    },
+    "foods": {
+        "id": 12,
+        "layer": 2
+    },
+    "trees": {
+        "id": 13,
+        "layer": 2
+    },
+    
+    "gameObjectsESP": {
+        "id": 1,
+        "layer": 3
+    },
+    "animalsESPHigh": {
+        "id": 2,
+        "layer": 3
+    },
+    "playersESPHigh": {
+        "id": 3,
+        "layer": 3
+    },
+    "chatMessages": {
+        "id": 4,
+        "layer": 3
+    },
+    "deathText": {
+        "id": 5,
+        "layer": 3
+    },
+    "minimap": {
+        "id": 6,
+        "layer": 3
+    },
+    "fadeTexts": {
+        "id": 7,
+        "layer": 3
+    }
+}
