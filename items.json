@@ -1,0 +1,320 @@
+{
+    "weapons": [{
+        "id": 0,
+        "ageAccess": 1,
+        "name": "Basic axe",
+        "desc": "Tool for gathering resources",
+        "weaponPosition": 0,
+        "damage": 25,
+        "range": 65,
+        "gatherValue": 1,
+        "speed": 300
+    }, {
+        "id": 1,
+        "ageAccess": 3,
+        "name": "Great axe",
+        "desc": "Gathers resources at a higher rate but decreases overall speed",
+        "weaponPosition": 0,
+        "damage": 30,
+        "range": 70,
+        "gatherValue": 2,
+        "speedAffect": 0.8,
+        "speed": 500
+    }, {
+        "id": 2,
+        "ageAccess": 3,
+        "name": "Short sword",
+        "desc": "Increased attack power but slower gathering speed",
+        "weaponPosition": 0,
+        "damage": 35,
+        "range": 95,
+        "gatherValue": 1,
+        "speedAffect": 0.9,
+        "speed": 300
+    }, {
+        "id": 3,
+        "name": "Wood mace",
+        "weaponPosition": 0,
+        "damage": 50,
+        "range": 135,
+        "speedAffect": 0.3,
+        "speed": 2000,
+        "spritePadding": 30
+    }],
+    "groups": [{
+		"id": 0,
+		"name": "foods"
+	}, {
+		"id": 1,
+		"name": "walls",
+		"place": true,
+		"limit": 50
+	}, {
+		"id": 2,
+		"name": "spikes",
+		"place": true,
+		"limit": 50
+	}, {
+		"id": 3,
+		"name": "windmills",
+		"place": true,
+		"limit": 300
+	}, {
+		"id": 4,
+		"name": "traps",
+		"place": true,
+		"limit": 50
+	}, {
+		"id": 5,
+		"name": "boosters",
+		"place": true,
+		"limit": 50
+	}, {
+		"id": 6,
+		"name": "mines",
+		"place": true,
+		"limit": 1
+	}, {
+		"id": 7,
+		"name": "system_items",
+		"place": true,
+		"limit": 1000
+	}],
+    "items": [{
+        "id": 0,
+        "groupId": 0,
+        "name": "Apple",
+        "desc": "Restores 20 health when consumed",
+        "requiredResources": [
+            [ "food", 5 ]
+        ],
+        "healValue": 20,
+        "scale": 22,
+		"holdOffset": 15
+    }, {
+        "id": 1,
+        "groupId": 0,
+        "name": "Cookie",
+        "desc": "Restores 40 health when consumed",
+        "requiredResources": [
+            [ "food", 10 ]
+        ],
+        "healValue": 40,
+		"scale": 27,
+		"holdOffset": 15
+    }, {
+        "id": 2,
+        "groupId": 1,
+        "name": "Wood wall",
+        "desc": "Provides protection for your farm",
+        "requiredResources": [
+            [ "wood", 10 ]
+        ],
+        "maxHealth": 350,
+		"scale": 47,
+		"holdOffset": 20,
+		"placeOffset": -5
+    }, {
+        "id": 3,
+        "groupId": 1,
+        "name": "Stone wall",
+        "desc": "Provides improved protection for your farm",
+        "requiredResources": [
+            [ "stone", 15 ]
+        ],
+        "maxHealth": 700,
+		"scale": 47,
+		"holdOffset": 20,
+		"placeOffset": -5
+    }, {
+        "id": 4,
+        "groupId": 2,
+        "name": "Spikes",
+        "desc": "Damages enemies when they touch them",
+        "requiredResources": [
+            [ "wood", 10 ],
+            [ "stone", 5 ]
+        ],
+        "maxHealth": 400,
+        "damage": 20,
+		"scale": 49,
+		"spritePadding": -23,
+		"holdOffset": 8,
+		"placeOffset": -5
+    }, {
+        "id": 5,
+        "groupId": 2,
+        "name": "Greater spikes",
+        "desc": "Damages enemies when they touch them",
+        "requiredResources": [
+            [ "wood", 15 ],
+            [ "stone", 10 ]
+        ],
+        "maxHealth": 500,
+        "damage": 40,
+		"scale": 52,
+		"spritePadding": -23,
+		"holdOffset": 8,
+		"placeOffset": -5
+    }, {
+        "id": 6,
+        "groupId": 3,
+        "name": "Windmill",
+        "desc": "Generates points over time",
+        "requiredResources": [
+            [ "wood", 30 ],
+            [ "stone", 5 ]
+        ],
+        "maxHealth": 400,
+        "goldPerSecond": 2,
+        "turnSpeed": 0.0016,
+		"spritePadding": 25,
+		"iconLineMult": 12,
+		"scale": 45,
+		"holdOffset": 20,
+		"placeOffset": 5
+    }, {
+        "id": 7,
+        "groupId": 3,
+        "name": "Faster windmill",
+        "desc": "Generates more points over time",
+        "requiredResources": [
+            [ "wood", 40 ],
+            [ "stone", 10 ]
+        ],
+        "maxHealth": 500,
+        "goldPerSecond": 4,
+        "turnSpeed": 0.0025,
+		"spritePadding": 25,
+		"iconLineMult": 12,
+		"scale": 45,
+		"holdOffset": 20,
+		"placeOffset": 5
+    }, {
+        "id": 8,
+        "groupId": 4,
+        "name": "Pit trap",
+        "desc": "Pit that traps enemies if they walk over it",
+        "requiredResources": [
+            [ "wood", 10 ],
+            [ "stone", 10 ]
+        ],
+        "maxHealth": 500,
+        "ignoreCollisions": true,
+        "collisionDiv": 0.3,
+        "stopMovevement": true,
+		"scale": 50,
+		"holdOffset": 20,
+		"placeOffset": -5,
+        "lowLayer": true
+    }, {
+        "id": 9,
+        "groupId": 5,
+        "name": "Boost pad",
+        "desc": "provides boost when stepped on",
+        "requiredResources": [
+            [ "wood", 5 ],
+            [ "stone", 10 ]
+        ],
+        "maxHealth": 150,
+        "speedAffect": 1.5,
+        "ignoreCollisions": true,
+        "collisionDiv": 0.7,
+		"scale": 45,
+		"holdOffset": 20,
+		"placeOffset": -5,
+        "lowLayer": true
+    }, {
+        "id": 10,
+        "groupId": 6,
+        "name": "Mine",
+        "desc": "allows you to mine stone",
+        "requiredResources": [
+            [ "stone", 100 ]
+        ],
+        "maxHealth": "infinity",
+        "gather": {
+            "type": "stone",
+            "amount": 1
+        },
+		"iconLineMult": 12,
+		"scale": 65,
+		"holdOffset": 20,
+		"placeOffset": 0
+    }, {
+        "id": 11,
+        "groupId": 7,
+        "name": "Chest",
+        "requiredResources": [
+            [ "gold", 10000 ]
+        ],
+        "maxHealth": 1000,
+        "scale": 65,
+        "spritePadding": 30
+    }],
+    "hats": [{
+        "id": 0,
+        "src": "bummel_hat",
+        "name": "Bummel Hat",
+        "desc": "It doesn't make sense, but it's a really good hat",
+        "cost": 100,
+        "scale": 120
+    }, {
+        "id": 1,
+        "src": "booster_hat",
+        "name": "Booster Hat",
+        "desc": "Increases your movement speed",
+        "cost": 1500,
+        "speedAffect": 1.16,
+        "scale": 120
+    }, {
+        "id": 2,
+        "src": "bull_helmet",
+        "name": "Bull Helmet",
+        "desc": "Increases damage done but drains health",
+        "cost": 2500,
+        "healthRegen": -5,
+        "damageAffect": 1.5,
+        "speedAffect": 0.96,
+        "scale": 120
+    }, {
+        "id": 3,
+        "src": "bushido_armor",
+        "name": "Bushido Armor",
+        "desc": "Heals you when you damage others",
+        "cost": 3000,
+        "healAfterHit": 0.4,
+        "scale": 120
+    }, {
+        "id": 4,
+        "src": "spike_gear",
+        "name": "Spike Gear",
+        "desc": "deal damage to players that damage you",
+        "cost": 3250,
+        "damageAfterHitMe": 0.45,
+        "scale": 120
+    }],
+    "animals": [{
+        "id": 0,
+        "src": "fish",
+        "name": "Fish",
+        "isPassive": true,
+        "scale": 35,
+        "maxHealth": 75,
+        "weightMult": 0.5,
+        "moveSpeed": 0.00090,
+        "turnSpeed": 0.0025,
+        "ignoreWaterCurrent": true,
+        "onlyRiverWalk": true,
+        "cantBoosting": true,
+        "xpForKill": 50,
+        "requiredResources": [
+            [ "food", 40 ],
+            [ "gold", 100 ]
+        ],
+        "maxEntities": 35,
+        "spawnBiome": "river",
+        "healthbarWidthDiv": 2,
+        "spriteSizeMult": 2.25
+    }]
+}
